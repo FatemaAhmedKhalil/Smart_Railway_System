@@ -10,4 +10,4 @@ This project will be meaningless without the train itself, and to improve travel
 This Repository includes the Low level software developed for the Black Pill board for **STM32F401CCU6** Microprocessor, which includes:
 1) **MCAL** : Includes the core peripherals and the needed vendor peripherals like *GPIO, SPI, RCC, NVIC, and TIM*, 
 2) **HAL**: Includes the drivers for *DHT11, A HAL Timer Interface, LinkMessage*, and other drivers that we didn't need.
-3) **freeRTOS[TM]**: The OS of our choice  to run this system.
+3) **freeRTOS[TM]**: The OS to run this system.
