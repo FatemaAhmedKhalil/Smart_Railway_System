@@ -1,3 +1,0 @@
-../Src/RCC_Program.c:19:4:RCC_u8SystemClkInitialization	24	static
-../Src/RCC_Program.c:389:4:RCC_u8Enable	24	static
-../Src/RCC_Program.c:410:4:RCC_u8Disable	24	static
