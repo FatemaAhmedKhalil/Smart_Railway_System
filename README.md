@@ -1,4 +1,4 @@
-# Smart Railway System.
+# Smart Railway System
 
 In This Project, we designed A smart Railway system that uses smart IoT Technology Developed by us, for both the upper level Software and the low level software and hardware.
 This project will be meaningless without the train itself, and to improve travelers’ satisfaction on their trip, the train cart will include some smart features such as 
