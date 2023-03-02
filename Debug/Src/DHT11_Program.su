@@ -1,4 +1,0 @@
-../Src/DHT11_Program.c:42:6:DHT11_voidInitialize	8	static
-../Src/DHT11_Program.c:60:6:DHT11_voidRawDataUpdate	16	static
-../Src/DHT11_Program.c:160:4:DHT11_u8GetReadings	16	static
-../Src/DHT11_Program.c:177:6:DHT11_u8Decoder	8	static

@@ -1,4 +1,0 @@
-../Src/TIM_HAL_Program.c:25:6:HTIM_voidResetTimer	16	static
-../Src/TIM_HAL_Program.c:65:6:HTIM_voidChangeAndUpdateTiming	24	static
-../Src/TIM_HAL_Program.c:98:6:HTIM_voidResetAndUpdateTiming	24	static
-../Src/TIM_HAL_Program.c:117:6:HTIM_voidDelayMilliseconds	16	static,ignoring_inline_asm
