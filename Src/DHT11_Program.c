@@ -57,7 +57,7 @@ void DHT11_voidInitialize(void)
 	MTIM_voidclearUpdateInterrupt(TIM2);		        //Clears Update Interrupt Flag
 }
 
-void DHT11_voidRawDataUpdate()
+u8 DHT11_voidRawDataUpdate()
 {
 
     // Sends 18ms 0 volt pulse.
@@ -106,7 +106,7 @@ void DHT11_voidRawDataUpdate()
         if (u8PulseDuration > 42  || MTIM_u8ReadUpdateInterrupt(DHT11_TIM_NUM) == 1) // add an error range of 2usec
         {
         	// Time Out, Means Not working
-            return; // Exit with error
+            return 1; // Exit with error
         }
 
         //**** Checking the LOW 80 usec pulse
@@ -121,7 +121,7 @@ void DHT11_voidRawDataUpdate()
         if (u8PulseDuration>82  || MTIM_u8ReadUpdateInterrupt(DHT11_TIM_NUM) == 1) // add an error range of 2usec
         {
         	// Time Out, Means Not working
-            return; // Exit with error
+            return 1; // Exit with error
         }
 
         //**** Checking the HIGH 80 usec pulse
@@ -137,7 +137,7 @@ void DHT11_voidRawDataUpdate()
         if (u8PulseDuration > 90 || MTIM_u8ReadUpdateInterrupt(DHT11_TIM_NUM) == 1 ) // add an error range of 2usec
         {
         	// Time Out, Means Not working
-            return; // Exit with error
+            return 1; // Exit with error
         }
 
 
@@ -154,7 +154,7 @@ void DHT11_voidRawDataUpdate()
     GPIO_u8SetGPIOPinMode(DHT11_GPIO_PORT, DHT11_GPIO_PIN, GPIO_MODER_OUTPUT);
     GPIO_u8SetPinValue(DHT11_GPIO_PORT, DHT11_GPIO_PIN,GPIO_HIGH);
 
-    //return 0;
+    return 0;
 }
 
 u8 DHT11_u8GetReadings(u8 *pu8Humidity,s8 *ps8Temperature)

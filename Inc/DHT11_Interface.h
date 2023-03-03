@@ -11,7 +11,7 @@
 #define DHT11_INTERFACE_H_
 
 void DHT11_voidInitialize(void);
-void DHT11_voidRawDataUpdate();
+u8 DHT11_voidRawDataUpdate();
 u8 DHT11_u8GetReadings(u8 *pu8Humidity,s8 *ps8Temperature);
 
 #if DHT11_GPIO_PORT==GPIO_PORTA
