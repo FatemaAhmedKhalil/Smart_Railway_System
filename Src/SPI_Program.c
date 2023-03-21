@@ -118,15 +118,12 @@ u8 SPI_u8SlaveMode (volatile SPI_MemoryMap *SPIx, u8 u8SoftSlavManag, u8 u8SlavS
 	return ErrorState;
 }
 
-void SPI_voidTransmit(volatile SPI_MemoryMap *SPIx, u16 u16Data)
+u16 SPI_voidTransceive(volatile SPI_MemoryMap *SPIx, u16 u16Data)
 {
 	SPIx->DR = u16Data ;
 
 	while(GET_BIT(SPIx->SR, TXE) == 0) {} // SPI1 is not empty
 	while(GET_BIT(SPIx->SR, BSY) == 1) {} // SPI1 is busy in communication or Tx buffer is not empty
-}
 
-u16 SPI_u16Receive(volatile SPI_MemoryMap *SPIx)
-{
 	return SPIx->DR;
 }

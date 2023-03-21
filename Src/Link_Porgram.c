@@ -108,6 +108,4 @@ void HLink_u8SendMessageDirectly(LinkMessage_t Copy_LinkMessage)
     while (GET_BIT(LINK_RASPBERRY_PI->SR,TXE) == 0 && GET_BIT(LINK_RASPBERRY_PI->SR,BSY) == 1);
 
 	LINK_RASPBERRY_PI->DR = ((u16)Copy_LinkMessage.data) | ((((u16)Copy_LinkMessage.type) | (((u16)Copy_LinkMessage.source)<<4))<<8);
-
-
 }
