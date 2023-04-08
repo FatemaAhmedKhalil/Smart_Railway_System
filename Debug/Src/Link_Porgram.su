@@ -1,7 +1,0 @@
-../Src/Link_Porgram.c:29:4:HLink_u8ReturnQueueSize	4	static
-../Src/Link_Porgram.c:34:6:HLink_Private_voidInitQueue	16	static
-../Src/Link_Porgram.c:45:6:HLink_voidEnqueueMessage	16	static
-../Src/Link_Porgram.c:71:5:HLink_Private_u16Dequeue	16	static
-../Src/Link_Porgram.c:85:6:HLink_voidInit	8	static
-../Src/Link_Porgram.c:90:4:HLink_u8SendMessagefromQueue	8	static
-../Src/Link_Porgram.c:106:6:HLink_u8SendMessageDirectly	16	static
