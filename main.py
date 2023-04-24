@@ -1,6 +1,6 @@
 ##******************************##
-## Raspberry PI 3 Model B		##
-## SPI0 Pins:					##
+## Raspberry PI 3 Model B       ##
+## SPI0 Pins:                   ##
 ##			23 GPIO 11	>> SCLK	##
 ##			19 GPIO 10	>> MOSI	##
 ##			21 GPIO 9	>> MISO	##
