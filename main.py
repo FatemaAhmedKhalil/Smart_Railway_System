@@ -31,7 +31,7 @@ import serial
 # MQTT Server Interface
 import paho.mqtt.client as mqtt
 
-# NMEA Translator
+# NMEA Translator 
 import pynmea2
 
 # SPI Pins
