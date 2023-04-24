@@ -20,10 +20,10 @@
  * [~1] : Invalid Timer Choice in Read  Mode
  * 2            : Wrong Value to enter
  */
-const u32 _TIM_ARR[]=	{_RSVD,
-					  	 TIM1_StartAddress, TIM2_StartAddress, TIM3_StartAddress,
-						 TIM4_StartAddress, TIM5_StartAddress, _RSVD, _RSVD, _RSVD,
-					  	 TIM9_StartAddress, TIM10_StartAddress, TIM11_StartAddress}; // Private Global Variables
+const u32 _TIM_ARR[] =	{_RSVD,
+			TIM1_StartAddress, TIM2_StartAddress, TIM3_StartAddress,
+			TIM4_StartAddress, TIM5_StartAddress, _RSVD, _RSVD, _RSVD,
+			TIM9_StartAddress, TIM10_StartAddress, TIM11_StartAddress}; // Private Global Variables
 
 /**
  * @brief Reads Associated Timer's Current counting value 
