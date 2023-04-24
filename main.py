@@ -7,7 +7,7 @@
 ##          24 GPIO 8	>> CE0	##
 ##          26 GPIO 7	>> CE1	##
 ##                              ##
-## UART Pins:					##
+## UART Pins:                   ##
 ##          00 GPIO 0	>> RX	##
 ##          00 GPIO 0	>> TX	##
 ##                              ##
