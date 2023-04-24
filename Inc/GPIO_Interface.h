@@ -11,8 +11,8 @@
 #define GPIO_Interface
 
 /** Error States **/
-#define GPIO_ErrorCheckPerphiralRange	4
-#define GPIO_ErrorPinsOutPut			5
+#define GPIO_ErrorCheckPerphiralRange 4
+#define GPIO_ErrorPinsOutPut          5
 
 /********************************************************/
 /* Define                                               */
@@ -94,22 +94,22 @@ u8 GPIO_u8SetPinOutputSpeed(u8 u8Port, u8 u8Pin, u8 u8OutputSpeed);
 /*          SPI3: AF6             : AF14                             */
 /*     USART1..2: AF7     EVENYOUT: AF15                             */
 /*********************************************************************/
-#define AF0		0b0000
-#define AF1		0b0001
-#define AF2		0b0010
-#define AF3		0b0011
-#define AF4		0b0100
-#define AF5		0b0101
-#define AF6		0b0110
-#define AF7		0b0111
-#define	AF8		0b1000
-#define	AF9		0b1001
-#define	AF10	0b1010
-#define	AF11	0b1011
-#define	AF12	0b1100
-#define	AF13	0b1101
-#define	AF14	0b1110
-#define	AF15	0b1111
+#define AF0   0b0000
+#define AF1   0b0001
+#define AF2   0b0010
+#define AF3   0b0011
+#define AF4   0b0100
+#define AF5   0b0101
+#define AF6   0b0110
+#define AF7   0b0111
+#define	AF8   0b1000
+#define	AF9   0b1001
+#define	AF10  0b1010
+#define	AF11  0b1011
+#define	AF12  0b1100
+#define	AF13  0b1101
+#define	AF14  0b1110
+#define	AF15  0b1111
 
 u8 GPIO_voidSetAlternativeFunction(u8 u8Port, u8 u8Pin, u8 u8AlternateFunction);
 
