@@ -46,7 +46,7 @@ struct _DigitalSensor_
 
 /*************************/
 /** Note:               **/
-/**     Give Low Value  **/
+/**    Gives Low Value  **/
 /*************************/
 u8 DigitalSensor_u8Sensing(DigitalSensor Sensor);
 
