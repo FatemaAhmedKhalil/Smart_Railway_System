@@ -11,7 +11,7 @@
 #define RCC_CONFIG_H_
 
 /************************************************************************/
-/* Initialize Clock Security System	                                    */
+/* Initialize Clock Security System                                     */
 /*    1) CSSBit                                                         */
 /*      --> CSS ON    1                                                 */
 /*      --> CSS OFF   0                                                 */
