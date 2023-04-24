@@ -15,10 +15,10 @@
 #define GPIO_ErrorPinsOutPut			5
 
 /********************************************************/
-/* Define												*/
-/*		1) For Port A Pins = (0 : 15)				    */
-/*		2) For Port B Pins = (1 : 15)			   	    */
-/*		3) For Port C Pins = (13 : 15)				    */
+/* Define                                               */
+/*    1) For Port A Pins = (0 : 15)                     */
+/*    2) For Port B Pins = (1 : 15)                     */
+/*    3) For Port C Pins = (13 : 15)                    */
 /********************************************************/
 #define GPIO_HIGH  1
 #define GPIO_LOW   0
@@ -83,17 +83,17 @@ u8 GPIO_u8SetPullResMode(u8 u8Port, u8 u8Pin, u8 u8Mode);
 
 u8 GPIO_u8SetPinOutputSpeed(u8 u8Port, u8 u8Pin, u8 u8OutputSpeed);
 
-/********************************************************************/
-/* Select Alternative Function										*/
-/*		    SYSTEM: AF0			 USART6: AF8						*/
-/*		TIM1/TIM2: AF1			I2C2..3: AF9						*/
-/*		   TIM3..5: AF2			 OTG_FS: AF10						*/
-/*	      TIM9..11: AF3				   : AF11						*/
-/*		   I2C1..3: AF4			   SDIO: AF12						*/
-/*		   SPI1..4: AF5				   : AF13						*/
-/*			  SPI3: AF6			       : AF14						*/
-/*		 USART1..2: AF7		   EVENYOUT: AF15						*/
-/********************************************************************/
+/*********************************************************************/
+/*  Select Alternative Function                                      */
+/*        SYSTEM: AF0       USART6: AF8                              */
+/*    TIM1/TIM2: AF1      I2C2..3: AF9                              */
+/*       TIM3..5: AF2       OTG_FS: AF10                             */
+/*      TIM9..11: AF3             : AF11                             */
+/*       I2C1..3: AF4         SDIO: AF12                             */
+/*       SPI1..4: AF5             : AF13                             */
+/*          SPI3: AF6             : AF14                             */
+/*     USART1..2: AF7     EVENYOUT: AF15                             */
+/*********************************************************************/
 #define AF0		0b0000
 #define AF1		0b0001
 #define AF2		0b0010
