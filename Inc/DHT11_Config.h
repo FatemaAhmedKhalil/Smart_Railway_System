@@ -11,7 +11,7 @@
 #define DHT11_CONFIG_H_
 
 
-#define DHT11_CLK_FREQ 		25000000UL // System frequency, it shouldn't be a static number defined here.
+#define DHT11_CLK_FREQ      25000000UL // System frequency, it shouldn't be a static number defined here.
 #define DHT11_GPIO_PORT     GPIO_PORTB // To enable the Peripheral
 #define DHT11_GPIO_PIN      GPIO_PIN3  // Connected PIN
 #define DHT11_TIM_NUM       TIM2       // Timer Mode
