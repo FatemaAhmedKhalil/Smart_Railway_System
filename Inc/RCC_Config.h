@@ -12,34 +12,34 @@
 
 /************************************************************************/
 /* Initialize Clock Security System	                                    */
-/*		1) CSSBit                                                         */
-/*			--> CSS ON    1                                                 */
-/*			--> CSS OFF   0                                                 */
+/*    1) CSSBit                                                         */
+/*      --> CSS ON    1                                                 */
+/*      --> CSS OFF   0                                                 */
 /************************************************************************/
 #define CSSBit	1
 
 /************************************************************************/
 /* Initialize HSE Clock Bypass                                          */
-/*		2) HSEBYPBit                                                      */
-/*			--> Bypass      1                                               */
-/*			--> NotBybass   0                                               */
+/*    2) HSEBYPBit                                                      */
+/*      --> Bypass      1                                               */
+/*      --> NotBybass   0                                               */
 /************************************************************************/
 #define HSEBYPBit	0
 
 /************************************************************************/
 /* Select System Clock                                                  */
-/*		3) HSIBit                                                         */
-/* 			--> HSI ON    1                                                 */
-/* 			--> HSI OFF   0                                                 */
-/*		4) HSEBit                                                         */
-/* 			--> HSE ON    1                                                 */
-/* 			--> HSE OFF   0                                                 */
-/*		5) PLLBit                                                         */
-/*			--> PLL ON		1                                                 */
-/*			--> PLL OFF		0                                                 */
-/*		6) PLLI2SBit                                                      */
-/*			--> PLLI2S ON		  1                                             */
-/*			--> PLLI2S OFF		0                                             */
+/*    3) HSIBit                                                         */
+/*      --> HSI ON    1                                                 */
+/*      --> HSI OFF   0                                                 */
+/*    4) HSEBit                                                         */
+/*      --> HSE ON    1                                                 */
+/*      --> HSE OFF   0                                                 */
+/*    5) PLLBit                                                         */
+/*      --> PLL ON		1                                                 */
+/*      --> PLL OFF		0                                                 */
+/*    6) PLLI2SBit                                                      */
+/*      --> PLLI2S ON		  1                                             */
+/*      --> PLLI2S OFF		0                                             */
 /************************************************************************/
 #define HSIBit		0
 #define HSEBit		1
