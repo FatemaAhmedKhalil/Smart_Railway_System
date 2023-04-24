@@ -8,8 +8,8 @@
 ##          26 GPIO 7	>> CE1	##
 ##                              ##
 ## UART Pins:					##
-##			00 GPIO 0	>> RX	##
-##			00 GPIO 0	>> RX	##
+##          00 GPIO 0	>> RX	##
+##          00 GPIO 0	>> TX	##
 ##                              ##
 ## App & Web key:               ##
 ## 0 ----> Temp                 ##
