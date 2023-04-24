@@ -1,0 +1,4 @@
+../Src/SPI_Program.c:17:4:SPI_u8Initialization	24	static
+../Src/SPI_Program.c:82:6:SPI_u8MasterMode	16	static
+../Src/SPI_Program.c:89:4:SPI_u8SlaveMode	24	static
+../Src/SPI_Program.c:121:5:SPI_voidTransceive	16	static

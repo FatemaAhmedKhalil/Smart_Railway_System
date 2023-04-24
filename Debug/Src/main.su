@@ -1,0 +1,10 @@
+../Src/main.c:23:6:FireSensing	24	static
+../Src/main.c:37:6:FireAction	24	static
+../Src/main.c:58:6:PIRSensing	24	static
+../Src/main.c:71:6:PIRAction	24	static
+../Src/main.c:91:6:DoorSystemSensing	24	static
+../Src/main.c:104:6:DoorSystemAction	24	static
+../Src/main.c:116:6:TempSensing	24	static
+../Src/main.c:129:6:TempAction	24	static
+../Src/main.c:179:6:SendMessege	24	static
+../Src/main.c:191:5:main	24	static
