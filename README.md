@@ -10,5 +10,5 @@ This project will be meaningless without the train itself, and to improve travel
 
 This branch in this Repository includes the Low level software developed for the Black Pill board for **STM32F401CCU6** Microprocessor, which includes:
 1) **MCAL** : Includes the core peripherals and the needed vendor peripherals like *GPIO, SPI, RCC, NVIC, Timers and etc...*, 
-2) **HAL**: Includes the drivers for *Sensors we need in the project like Flame Sensor, Temperature Sensor DHT11,.. etc, A HAL Timer Interface, and linking between the STM32 and the Rasspberry Pi, and other drivers that we need and in Raspberry Pi Model 3 Like GPS*.
+2) **HAL**: Includes the drivers for Sensors we need in the project like *Flame Sensor, Temperature Sensor DHT11,.. etc*, *A HAL Timer Interface, and linking between the STM32 and the Rasspberry Pi*, and other drivers that we need and in Raspberry Pi Model 3 Like *GPS*.
 3) **freeRTOS[TM]**: The OS chosen to run this system.
