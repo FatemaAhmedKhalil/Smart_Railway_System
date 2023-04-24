@@ -35,11 +35,11 @@
 /*      --> HSE ON    1                                                 */
 /*      --> HSE OFF   0                                                 */
 /*    5) PLLBit                                                         */
-/*      --> PLL ON		1                                                 */
-/*      --> PLL OFF		0                                                 */
+/*      --> PLL ON    1                                                 */
+/*      --> PLL OFF   0                                                 */
 /*    6) PLLI2SBit                                                      */
-/*      --> PLLI2S ON		  1                                             */
-/*      --> PLLI2S OFF		0                                             */
+/*      --> PLLI2S ON     1                                             */
+/*      --> PLLI2S OFF    0                                             */
 /************************************************************************/
 #define HSIBit		0
 #define HSEBit		1
@@ -47,16 +47,16 @@
 #define PLLI2SBit	0
 
 /************************************************************************/
-/* Define HPRE: AHB PreScaler											*/
-/*       0xxx: system clock not divided	 1								*/
-/*       1000: system clock divided by 2								*/
-/*       1001: system clock divided by 4								*/
-/*       1010: system clock divided by 8								*/
-/*       1011: system clock divided by 16								*/
-/*       1100: system clock divided by 64								*/
-/*       1101: system clock divided by 128								*/
-/*       1110: system clock divided by 256								*/
-/*       1111: system clock divided by 512								*/
+/* Define HPRE: AHB PreScaler                                           */
+/*      0xxx: system clock not divided  1                               */
+/*      1000: system clock divided by   2                               */
+/*      1001: system clock divided by   4                               */
+/*      1010: system clock divided by   8                               */
+/*      1011: system clock divided by   16                              */
+/*      1100: system clock divided by   64                              */
+/*      1101: system clock divided by   128                             */
+/*      1110: system clock divided by   256                             */
+/*      1111: system clock divided by   512                             */
 /************************************************************************/
 #define AHBPreScaler	1
 
