@@ -1,11 +1,12 @@
 ##******************************##
 ## Raspberry PI 3 Model B       ##
 ## SPI0 Pins:                   ##
-##			23 GPIO 11	>> SCLK	##
-##			19 GPIO 10	>> MOSI	##
-##			21 GPIO 9	>> MISO	##
-##			24 GPIO 8	>> CE0	##
-##			26 GPIO 7	>> CE1	##
+##          23 GPIO 11	>> SCLK	##
+##          19 GPIO 10	>> MOSI	##
+##          21 GPIO 9	>> MISO	##
+##          24 GPIO 8	>> CE0	##
+##          26 GPIO 7	>> CE1	##
+##                              ##
 ## UART Pins:					##
 ##			00 GPIO 0	>> RX	##
 ##			00 GPIO 0	>> RX	##
