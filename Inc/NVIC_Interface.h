@@ -16,12 +16,12 @@
 /******************************************/
 /* Define: Interrupt ID from Vector Table */
 /******************************************/
-#define NVIC_PendSV		-6
-#define NVIC_SysTick	-5
-#define NVIC_SVCall		-4
+#define NVIC_PendSV			-6
+#define NVIC_SysTick			-5
+#define NVIC_SVCall			-4
 #define NVIC_MemoryManagementFault	-3
-#define NVIC_BusFault	-2
-#define NVIC_UsageFault	-1
+#define NVIC_BusFault			-2
+#define NVIC_UsageFault			-1
 #define NVIC_WWDG		0
 #define NVIC_EXTI16		1
 #define NVIC_EXTI21		2
@@ -40,24 +40,24 @@
 #define NVIC_DMA1_STREAM4	15
 #define NVIC_DMA1_STREAM5	16
 #define NVIC_DMA1_STREAM6	17
-#define NVIC_ADC			18
-#define NVIC_EXTI9			23
+#define NVIC_ADC		18
+#define NVIC_EXTI9		23
 #define NVIC_TIM1_BRK_TIM9	24
 #define NVIC_TIM1_UP_TIM10	25
 #define NVIC_TIM1_TRG_COM_TIM11	26
-#define NVIC_TIM1_CC	27
+#define NVIC_TIM1_CC		27
 #define NVIC_TIM2		28
 #define NVIC_TIM3		29
 #define NVIC_TIM4		30
-#define NVIC_I2C1_EV	31
-#define NVIC_I2C1_ER	32
-#define NVIC_I2C2_EV	33
-#define NVIC_I2C2_ER	34
+#define NVIC_I2C1_EV		31
+#define NVIC_I2C1_ER		32
+#define NVIC_I2C2_EV		33
+#define NVIC_I2C2_ER		34
 #define NVIC_SPI1		35
 #define NVIC_SPI2		36
 #define NVIC_USART1		37
 #define NVIC_USART2		38
-#define NVIC_EXTI15_10	30
+#define NVIC_EXTI15_10		30
 #define NVIC_EXTI17		41
 #define NVIC_EXTI18		42
 #define NVIC_DMA1_STREAM7	47
@@ -69,15 +69,15 @@
 #define NVIC_DMA2_STREAM2	58
 #define NVIC_DMA2_STREAM3	59
 #define NVIC_DMA2_STREAM4	60
-#define NVIC_OTG_FS			67
+#define NVIC_OTG_FS		67
 #define NVIC_DMA2_STREAM5	68
 #define NVIC_DMA2_STREAM6	69
 #define NVIC_DMA2_STREAM7	70
-#define NVIC_USART6			71
+#define NVIC_USART6		71
 #define NVIC_I2C3_EV		72
 #define NVIC_I2C3_ER		73
-#define NVIC_FPU			81
-#define NVIC_SPI4			84
+#define NVIC_FPU		81
+#define NVIC_SPI4		84
 
 void NVIC_voidEnableInterrupt (u8 u8InterruptID);
 void NVIC_voidDisableInterrupt (u8 u8InterruptID);
@@ -87,20 +87,20 @@ void NVIC_voidClearPendingFlag (u8 u8InterruptID);
 
 u8 NVIC_u8GetActiveFlag (u8 u8InterruptID);
 
-/****************************************************************************/
-/* Define: Priority option													*/
-/*			1) Groups16_Subs0												*/
-/*			2) Groups8_Subs2												*/
-/*			3) Groups4_Subs4												*/
-/*			4) Groups2_Subs8												*/
-/*			5) Groups0_Subs16												*/
-/* Define:																	*/
-/*			1) Interrupt Position in Vector Table							*/
-/*			2) Group Priority												*/
-/*			3) Sub Priority													*/
-/*																			*/
-/* NOTE : Select Groups and Subs priority which suitable for PRIGROUP		*/
-/****************************************************************************/
+/************************************************************************/
+/* Define: Priority option						*/
+/*			1) Groups16_Subs0				*/
+/*			2) Groups8_Subs2				*/
+/*			3) Groups4_Subs4				*/
+/*			4) Groups2_Subs8				*/
+/*			5) Groups0_Subs16				*/
+/* Define:								*/
+/*			1) Interrupt Position in Vector Table		*/
+/*			2) Group Priority				*/
+/*			3) Sub Priority					*/
+/*									*/
+/* NOTE : Select Groups and Subs priority which suitable for PRIGROUP	*/
+/************************************************************************/
 #define NVIC_Groups16_Subs0	0b011	// 0b0xx (4 Group Bits + , 0 Sub Bits -) ++++
 #define NVIC_Groups8_Subs2	0b100	// (3 Group Bits + , 1 Sub Bits -) +++-
 #define NVIC_Groups4_Subs4	0b101	// (2 Group Bits + , 2 Sub Bits -) ++--
