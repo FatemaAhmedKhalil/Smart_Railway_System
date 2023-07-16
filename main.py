@@ -1,63 +1,56 @@
 ##******************************##
-## Raspberry PI 3 Model B       ##
-## SPI0 Pins:                   ##
-##          23 GPIO 11	>> SCLK	##
-##          19 GPIO 10	>> MOSI	##
-##          21 GPIO 9	>> MISO	##
-##          24 GPIO 8	>> CE0	##
-##          26 GPIO 7	>> CE1	##
-##                              ##
-## UART Pins:                   ##
-##          00 GPIO 0	>> RX	##
-##          00 GPIO 0	>> TX	##
-##                              ##
-## App & Web key:               ##
-## 0 ----> Temp                 ##
-## 1 ----> Hum                  ##
-## 2 ----> Flame                ##
-## 3 ----> Door                 ##
-## 4 ----> Light                ##
-## 5 ----> GPS                  ##
+## Raspberry PI 3 Model B		##
+## SPI0 Pins:					##
+##			23 GPIO 11	>> SCLK	##
+##			19 GPIO 10	>> MOSI	##
+##			21 GPIO 9	>> MISO	##
+##			24 GPIO 8	>> CE0	##
+##			26 GPIO 7	>> CE1	##
+##UART Pins:					##
+##			00 GPIO 0	>> RX	##
+##			00 GPIO 0	>> RX	##
 ##******************************##
-
-# Fundamental Python 
+##app&web key
+##0---->temp
+##1---->hum
+##2---->flam
+##3---->door
+##4---->light
+##5---->gps
+#Fundamental Python
 import time
 import string
-
-# Raspberry Pi Modules
+#Raspberry Pi Modules
 import RPi.GPIO as GPIO
 import spidev
 import serial
-
-# MQTT Server Interface
+#MQTT Server Interface
 import paho.mqtt.client as mqtt
-
-# NMEA Translator 
+#NMEA Translator
 import pynmea2
 
-# SPI Pins
+
+#Global Variables
+#SPI Pins
 SPIx = 0
 CEx = 0
 NSS = 2
-
-# Serial Interface for GPS
+#Serial Interface for GPS
 GPS=serial.Serial('/dev/serial0', baudrate=9600, timeout=0.5)
-
-# Data
+#Data
 send_byte = 0x0F
 rcv_byte  =[]
+#MQTT
 
-# MQTT
 mqttBroker = 'test.mosquitto.org'
-
-# MQTT Server Initializations
+#MQTT Server Initializations
 client = mqtt.Client("")
 client.connect(mqttBroker)
+#Functions
 
-# Functions
-# Sending and Receiving data between Raspberry Pi and STM32 over SPI
+#Sending and Receiving data between Raspberry Pi and STM32 over SPI
 def SPI_sendReceiveData(spi_interface,sent_data):
-    # Loop 3 times
+    #Loop 3 times
     for i in range(3):
         GPIO.output(NSS, GPIO.LOW)
         rcv_byte.append(spi_interface.xfer2([sent_data])[0])
@@ -65,10 +58,10 @@ def SPI_sendReceiveData(spi_interface,sent_data):
         
     print(rcv_byte)
     checkSum = (rcv_byte[0]+rcv_byte[1]-rcv_byte[2])
-    # If the checksum was successful
+    #If the checksum was successful
     if (checkSum==0):
         rcv_byte.pop()
-    # If data was corrupted
+    #If data was corrupted
     else:
         print("Error")
         rcv_byte.pop()
@@ -90,38 +83,38 @@ def GPS_SendData():
 
 def MQTT_sendData(SourceType, Message):
     if 		SourceType==2:
-        # DHT11 Humidity reading
+        #DHT11 Humidity reading
         #client.publish("Train 934", "1"+","+str(Message))
         print("Humidity = "+str(Message))
         
     elif	SourceType==1:
-        # DHT11 Temperature Reading
+        #DHT11 Temperature Reading
         #client.publish("Train 934", "0"+","+str(Message))
         print("Temperature = "+str(Message))
     elif	SourceType==16:
-        # Flame Sensor Reading
+        #Flame Sensor Reading
         #client.publish("Train 934", "2"+","+str(Message))
         print("Flame = "+str(Message))
         pass
     elif	SourceType==32:
-        # PIR Sensor Reading
+        #PIR Sensor Reading
         #client.publish("Train 934", "4"+","+str(Message))
         print("PIR = "+str(Message))
         pass
     elif	SourceType==48:
-        # Door State (unused)
+        #Door State (unused)s
         pass
     elif	SourceType==64:
-        # GPS Latitude
+        #GPS Latitude
         pass
     elif	SourceType==65:
-        # GPS Longitude
+        #GPS Longitude
         pass
 
 
-# main function
+#main function
 def main():
-    # Link Initializations
+    #Link Initializations
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(NSS, GPIO.OUT)
     GPIO.output(NSS, GPIO.LOW)
@@ -131,25 +124,25 @@ def main():
     spi.max_speed_hz = 6250000
     spi.mode = 0b00
     
-    # GPS Initializations
+    #GPS Initializations
     GPS.close()
     GPS.open()
 
     
     while True:
-        # 1. Receive data from stm32
+        #1. Receive data from stm32
         SPI_sendReceiveData(spi, send_byte)
 
-        # 2. Receive data from GPS
+        #2. Receive data from GPS
 
-        # 3. Communicatee with MQTT Broker
+        #3. Communicatee with MQTT Broker
         while(rcv_byte!=[]):
             source=rcv_byte.pop(0)
             data=rcv_byte.pop(0)
             MQTT_sendData(source,data)
             print("Sent")
             
-        time.sleep(1) # Repeat every 250 milliseconds
+        time.sleep(0.3) #Repeat every 300 milliseconds
 
 
 if __name__ == '__main__':
