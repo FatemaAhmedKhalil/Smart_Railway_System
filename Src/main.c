@@ -236,7 +236,7 @@ int main()
 							   SPI_LowIDLE,
 							   SPI_fPCLK2,
 							   SPI_MSBTrans,
-							   SPI_Data8Bits,
+							   SPI_Data16Bits,
 							   SPI_Enable);
 
 	/** Initialize DHT11 **/
