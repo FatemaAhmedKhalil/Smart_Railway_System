@@ -87,7 +87,7 @@ void Link_voidInit()
     HLink_Private_voidInitQueue();
 }
 
-/*u8 Link_u8SendMessage()
+u8 Link_u8SendMessage()
 {
     if (Private_Queue.elemNum==0)
         return 1;
@@ -98,10 +98,10 @@ void Link_voidInit()
     {
         // Hold the system until SPI is ready to send message.
         while (GET_BIT(LINK_RASPBERRY_PI->SR,TXE) == 0 && GET_BIT(LINK_RASPBERRY_PI->SR,BSY) == 1);
-        HLink_Private_u16Dequeue((u16*)&LINK_RASPBERRY_PI->DR);
+        Link_u8SendDequeueMessage((u16*)&LINK_RASPBERRY_PI->DR);
     }
     return 0;
-}*/
+}
 
 void Link_voidSendMessageDirectly(LinkMessage_t Copy_LinkMessage)
 {

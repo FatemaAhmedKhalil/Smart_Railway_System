@@ -26,7 +26,6 @@ void FireSensing(void* pvParameters)
 	xLastWakeTime = xTaskGetTickCount (); // Get Last Time the Task Started
 	while(1)
 	{
-
 		FireSensor_ReadingValue = 0;
 		FireSensor_ReadingValue = DigitalSensor_u8Sensing(LM393);
 
@@ -183,7 +182,7 @@ void SendMessege(void* pvParameters)
 	while(1)
 	{
 		u8 RX = 0;
-		RX = Link_u8SendDequeueMessage(); // Send the Message
+		RX = Link_u8SendMessage(); // Send the Message
 		vTaskDelayUntil(&xLastWakeTime, 200); // Schedule the Task Every 50ms
 	}
 }
