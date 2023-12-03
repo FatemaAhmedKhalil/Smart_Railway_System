@@ -59,7 +59,7 @@ def SPI_sendReceiveData(spi_interface,sent_data):
     print(rcv_byte)
     checkSum = (rcv_byte[0]+rcv_byte[1]-rcv_byte[2])
     #If the checksum was successful
-    if (checkSum==0):
+    if (checkSum == 0):
         rcv_byte.pop()
     #If data was corrupted
     else:
