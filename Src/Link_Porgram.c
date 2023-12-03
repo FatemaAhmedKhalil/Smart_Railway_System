@@ -26,12 +26,12 @@ struct {
 } Private_Queue;
 
 
-u8 HLink_u8ReturnQueueSize()
+u8 Link_u8ReturnQueueSize()
 {
 	return Private_Queue.elemNum;
 }
 
-void HLink_Private_voidInitQueue()
+void Link_voidInitQueue()
 {
     for (u8 i =0; i<MAX_QUEUE_SIZE; i++)
     {
@@ -42,7 +42,7 @@ void HLink_Private_voidInitQueue()
     Private_Queue.elemNum   = 0;
 }
 
-void HLink_voidEnqueueMessage(LinkMessage_t Copy_LinkMessage)
+void Link_voidEnqueueMessage(LinkMessage_t Copy_LinkMessage)
 {
     
     if (Private_Queue.head == Private_Queue.tail || Private_Queue.elemNum==0)
@@ -68,7 +68,7 @@ void HLink_voidEnqueueMessage(LinkMessage_t Copy_LinkMessage)
     }
 }
 
-u16 HLink_Private_u16Dequeue(volatile u16 *P_u16ReturnVal)
+u8 Link_u8SendDequeueMessage(volatile u16 *P_u16ReturnVal)
 {
 	//  returns a copy of the head element.
     if (Private_Queue.elemNum>0)
@@ -82,12 +82,12 @@ u16 HLink_Private_u16Dequeue(volatile u16 *P_u16ReturnVal)
         return 1;
 }
 
-void HLink_voidInit()
+void Link_voidInit()
 {
     HLink_Private_voidInitQueue();
 }
 
-u8 HLink_u8SendMessage()
+/*u8 Link_u8SendMessage()
 {
     if (Private_Queue.elemNum==0)
         return 1;
@@ -101,9 +101,9 @@ u8 HLink_u8SendMessage()
         HLink_Private_u16Dequeue((u16*)&LINK_RASPBERRY_PI->DR);
     }
     return 0;
-}
+}*/
 
-void HLink_u8SendMessageDirectly(LinkMessage_t Copy_LinkMessage)
+void Link_voidSendMessageDirectly(LinkMessage_t Copy_LinkMessage)
 {
     while (GET_BIT(LINK_RASPBERRY_PI->SR,TXE) == 0 && GET_BIT(LINK_RASPBERRY_PI->SR,BSY) == 1);
 
